@@ -1,0 +1,5 @@
+dependencies {
+    compile libraries.springCore
+
+    testCompile libraries.testing
+}

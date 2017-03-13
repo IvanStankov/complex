@@ -1,0 +1,20 @@
+ext {
+    springVersion = "4.3.7.RELEASE"
+
+    junitVersion = "4.12"
+    mockitoVersion = "2.7.15"
+
+    libraries = [
+        springWeb: "org.springframework:spring-web:${springVersion}",
+
+        springCore: dependencies.create("org.springframework:spring-core:${springVersion}") {
+            exclude module:"commons-logging"
+        },
+
+        testing: [
+                "junit:junit:${junitVersion}",
+                "org.mockito:mockito-core:${mockitoVersion}"
+        ]
+    ]
+
+}

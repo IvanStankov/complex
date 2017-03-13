@@ -1,0 +1,18 @@
+apply from: "dependencies.gradle"
+group 'com.ivan'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+subprojects {
+    group 'com.ivan'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: "java"
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+}

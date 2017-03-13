@@ -1,0 +1,5 @@
+
+dependencies {
+    compile libraries.springWeb
+    testCompile libraries.testing
+}

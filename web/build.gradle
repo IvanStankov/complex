@@ -1,5 +1,36 @@
+apply plugin: "war"
+apply plugin: 'com.bmuschko.cargo'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.bmuschko:gradle-cargo-plugin:2.2.3'
+    }
+}
+
+war {
+    archiveName = 'complex.war'
+}
 
 dependencies {
     compile libraries.springWeb
     testCompile libraries.testing
+}
+
+cargo {
+    containerId = 'tomcat8x'
+    port = 8080
+
+    deployable {
+        context = 'complex'
+    }
+
+    remote {
+        hostname = "localhost"
+        username = "tomcat"
+        password = "tomcat"
+    }
 }

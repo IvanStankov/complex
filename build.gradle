@@ -15,4 +15,8 @@ subprojects {
     repositories {
         mavenCentral()
     }
+
+    dependencies {
+        compile libraries.logging
+    }
 }

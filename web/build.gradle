@@ -35,3 +35,7 @@ cargo {
         password = "tomcat"
     }
 }
+
+gradle.buildFinished {
+    logger.lifecycle("Finished at: " + new Date().format('yyyy-MM-dd HH:mm:ss'))
+}

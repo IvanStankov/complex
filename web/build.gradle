@@ -16,7 +16,8 @@ war {
 }
 
 dependencies {
-    compile libraries.springWeb
+    compile project(':core'),
+            libraries.springWeb
     testCompile libraries.testing
 }
 
